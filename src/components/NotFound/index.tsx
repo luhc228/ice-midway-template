@@ -7,9 +7,6 @@ const NotFound = () => {
       <div>
         <Link to="/">Home</Link>
       </div>
-      <div>
-        <Link to="/dashboard">Dashboard</Link>
-      </div>
     </div>
   );
 };

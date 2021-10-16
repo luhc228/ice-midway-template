@@ -1,3 +1,11 @@
+import { useMethod } from "../hook/useMethod";
+
+type ContactInfo = {
+  name: string;
+  email: string;
+  description?: string;
+}
+
 export async function getProfile() {
   return {
     name: 'ICE & Midway',
@@ -15,4 +23,11 @@ export async function getDescription() {
    目前我主要使用 Javascript 技术，如 React 和 NodeJS。我还拥有使用AWS/GCP等云基础设施的实践经验，并部署了应用程序，同时考虑到了可伸缩性。Docker、Kubernetes 和 Jenkins 是我用于CI/CD的一些很酷的工具。
   `;
   return description;
+}
+
+export async function contact(contactInfo: ContactInfo) {
+  console.log('contactInfo: ', contactInfo);
+  return {
+    method: useMethod(),
+  };
 }

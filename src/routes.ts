@@ -1,8 +1,9 @@
 import { IRouterConfig } from 'ice';
 import Layout from '@/layouts/BasicLayout';
-import Dashboard from '@/pages/Dashboard';
+import Blog from '@/pages/Blog';
 import Home from '@/pages/Home';
 import NotFound from '@/components/NotFound';
+import Contact from '@/pages/Contact';
 
 const routes: IRouterConfig[] = [
   {
@@ -15,8 +16,12 @@ const routes: IRouterConfig[] = [
         component: Home,
       },
       {
-        path: '/dashboard',
-        component: Dashboard,
+        path: '/blog',
+        component: Blog,
+      },
+      {
+        path: '/contact',
+        component: Contact,
       },
       {
         component: NotFound,
