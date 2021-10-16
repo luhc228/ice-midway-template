@@ -2,7 +2,6 @@ import {
   Affix, Layout, Row, Col,
 } from 'antd';
 import { useEffect, useState } from 'react';
-import FA from 'react-fontawesome';
 import FeatherIcon from 'feather-icons-react';
 import { useLocation } from 'ice';
 import styles from './sidebar.module.less';

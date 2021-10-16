@@ -1,70 +1,63 @@
 import { Row, Col } from 'antd';
+import { useState, useEffect } from 'react';
 import AboutTitle from '@/components/AboutTitle';
-import { domHtml } from '@/utils/stripTags';
-
-const pageText = {
-  paraOne: `Hello !! My name is Rolwin Reevan Monteiro. I'm a full stack web developer who is
-    passionate about various web technologies. I like to experiment with different web
-    technologies. I have an experience of 3+ years working with LAMP stack, MERN stack
-    and ELK stack. Building fancy UI's just like this one that your seeing 😅 and writing blogs about tech stacks
-    is what Rolwin loves to do. Check my blog which I update every week for some Javascript and some
-    cool notes on web technologies.`,
-  paraTwo: `Currently I work mostly with Javascript technologies like ReactJS and NodeJS. I also
-    have hands on experience working with cloud infrastructures like <b>AWS/GCP</b> and have deployed applications
-    keeping scalability in mind. Docker, Kubernetes, Jenkins, SonarQube are some of the cool
-    tools I use for <b>CI/ CD</b>. I'm always a learner and a self taught programmer.`,
-};
+import { getDescription } from '@/apis/lambda';
 
 const AboutMe = () => {
+  const [description, setDescription] = useState('');
+
+  useEffect(() => {
+    getDescription().then(res => {
+      setDescription(res)
+    })
+  }, []);
+
   return (
     <>
       <div>
-        <h1 className="titleSeparate">About Me</h1>
-        <p>
-          {pageText.paraOne}
-        </p>
-        <p dangerouslySetInnerHTML={domHtml(pageText.paraTwo)} />
+        <h1 className="titleSeparate">关于我</h1>
+        <p>{description}</p>
       </div>
-      <Row gutter={[20, 20]}>
+      <Row gutter={[20, 20]} style={{marginTop: 30}}>
         <Col xs={24} sm={24} md={12} lg={8}>
           <AboutTitle
             img="location.png"
             height={60}
             alt="location image"
-            textH4="Born and bought up in"
-            textH3="Mangalore, KA, India"
+            textH4="出生于"
+            textH3="浙江 杭州"
           />
         </Col>
         <Col xs={24} sm={24} md={12} lg={8}>
           <AboutTitle
             img="coffee.png"
             alt="coffee image"
-            textH4="Love Coffee"
-            textH3="Coffee + Me = Happiness"
+            textH4="咖啡"
+            textH3="真快乐"
           />
         </Col>
         <Col xs={24} sm={24} md={12} lg={8}>
           <AboutTitle
             img="meeting.png"
             alt="meeting image"
-            textH4="Socially Awkward"
-            textH3="At times"
+            textH4="社交"
+            textH3="非常热爱"
           />
         </Col>
         <Col xs={24} sm={24} md={12} lg={8}>
           <AboutTitle
             img="motorcycle.png"
             alt="motorcycle image"
-            textH4="Love Riding"
-            textH3="Biker for life"
+            textH4="喜欢骑自行车"
+            textH3="终身骑手"
           />
         </Col>
         <Col xs={24} sm={24} md={12} lg={8}>
           <AboutTitle
             img="web.png"
             alt="web image"
-            textH4="Self Taught Programmer"
-            textH3="Thanks to the Web Resources"
+            textH4="自学编程"
+            textH3="感谢丰富的 Web 资源"
             height={60}
             width={60}
           />
@@ -73,8 +66,8 @@ const AboutMe = () => {
           <AboutTitle
             img="graduation.png"
             alt="graduation image"
-            textH4="Pursued B.Tech in"
-            textH3="Computer Science"
+            textH4="北京大学"
+            textH3="计算机科学与工程"
             height={60}
             width={60}
           />

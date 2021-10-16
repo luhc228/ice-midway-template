@@ -1,22 +1,14 @@
 export default [
   {
-    name: 'About',
+    name: '关于',
     path: '/',
   },
   {
-    name: 'Contact',
-    path: '/contact',
-  },
-  {
-    name: 'Blog',
+    name: '博客',
     path: '/blog',
   },
   {
-    name: 'Tags',
-    path: '/tags',
-  },
-  {
-    name: 'Resume',
-    path: '/resume',
+    name: '联系',
+    path: '/contact',
   },
 ];
