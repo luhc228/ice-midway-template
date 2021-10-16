@@ -1,5 +1,5 @@
 import { Col, Form, Input, Button } from 'antd';
-import { contact } from '@/apis/lambda';
+import { contact } from '@/apis/lambda/contact';
 
 const validateMessages = {
   required: 'This field is required!',
