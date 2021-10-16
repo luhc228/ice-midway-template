@@ -1,0 +1,18 @@
+service:
+  name: hooks
+
+provider:
+  name: aliyun
+  runtime: nodejs12
+
+aggregation:
+  all:
+    functionsPattern:
+      - '*'
+
+package:
+  include:
+    - build
+custom:
+  customDomain:
+    domainName: auto

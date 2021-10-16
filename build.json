@@ -1,0 +1,6 @@
+{
+  "vite": true,
+  "plugins": [
+    "build-plugin-faas"
+  ]
+}
