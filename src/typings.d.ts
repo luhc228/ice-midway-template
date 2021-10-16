@@ -3,6 +3,11 @@ declare module '*.module.scss' {
   export default classes;
 }
 
+declare module '*.module.less' {
+  const classes: { [key: string]: string };
+  export default classes;
+}
+
 declare let __webpack_public_path__: string | undefined;
 
 declare interface Window {
