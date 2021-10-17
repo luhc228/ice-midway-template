@@ -1,4 +1,3 @@
-node_modules/
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
 # dependencies
@@ -26,3 +25,5 @@ index.module.scss.d.ts
 src/apis/proxy_service_manager.ts
 tsconfig_integration_faas.json
 logs
+
+.serverless

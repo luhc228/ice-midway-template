@@ -1,34 +1,40 @@
-## Getting Started
+# Getting Started
 
 Docs：[Midway Hooks - Getting Started](https://www.yuque.com/midwayjs/midway_v2/hooks_intro?translate=en)
 
-### Directory Structure
-
+## Directory Structure
 ```
 .
-├── bootstrap.js //
-├── jest.config.js // Unit test file
-├── midway.config.ts // config file for setup directory and middleware
+├── bootstrap.js              //
+├── jest.config.js            // Unit test file
+├── midway.config.ts          // config file for setup directory and middleware
 ├── src
-│   ├── apis // Backend directory
-│   │   ├── configuration.ts // Midway Hooks configuration
-│   │   └── lambda // Api directory(Can be modified in midway.config.ts)
+│   ├── apis                  // Backend directory
+│   │   ├── configuration.ts  // Midway Hooks configuration
+│   │   └── lambda            // Api directory(Can be modified in midway.config.ts)
 │   │       ├── index.test.ts // Api test file
-│   │       └── index.ts // Api file
-│   └── main.ts // Frontend framework file
+│   │       └── index.ts      // Api file
+│   ├── pages                 // Frontend pages
+│   ├── components            // Frontend components
+│   ├── components            // Frontend layouts
+│   └── app.ts                // Frontend framework file
 ├── tsconfig.json
-└── vite.config.ts
+└── build.json
 ```
 
-### Commands
+## Task
 
-#### Start Dev Server
+### Start Dev Server
 
 ```bash
 $ npm start
 ```
 
-#### Build
+### Build your blog
+
+modify your content in `src/apis/lambda/index.ts` and view the new content in the browser.
+
+### Build
 
 ```bash
 $ npm run build

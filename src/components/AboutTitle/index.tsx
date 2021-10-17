@@ -8,7 +8,7 @@ const AboutTitle = (props) => {
     <div className={style.aboutTitle}>
       <div className={style.aboutBlock}>
         <img
-          src={`../../../public/${img}`}
+          src={img}
           height={height || 64}
           width={width || 64}
           alt={alt || ''}

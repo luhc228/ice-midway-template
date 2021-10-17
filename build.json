@@ -1,7 +1,6 @@
 {
   "vite": true,
   "plugins": [
-    "build-plugin-faas",
-    "build-plugin-antd"
+    "build-plugin-faas"
   ]
 }
