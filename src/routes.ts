@@ -17,10 +17,12 @@ const routes: IRouterConfig[] = [
       },
       {
         path: '/blog',
+        exact: true,
         component: Blog,
       },
       {
         path: '/contact',
+        exact: true,
         component: Contact,
       },
       {

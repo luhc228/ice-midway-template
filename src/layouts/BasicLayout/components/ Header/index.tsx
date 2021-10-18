@@ -4,7 +4,7 @@ import { Layout } from 'antd';
 import cn from 'classnames';
 import { useWindowSize } from '@/utils/hooks';
 import styles from './header.module.less';
-import menuConfig from '../menuConfig';
+import menuConfig from '../../menuConfig';
 import 'font-awesome/less/font-awesome.less';
 import '@/styles/global.less';
 
