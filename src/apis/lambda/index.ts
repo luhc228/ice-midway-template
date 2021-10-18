@@ -2,8 +2,8 @@ export async function getProfile() {
   return {
     name: 'ICE x Midway',
     birth: '2021.10.21',
-    location: '浙江杭州',
-    email: '123@foxmail.com',
+    location: '浙江·杭州',
+    email: 'https://ice.work',
     job: '全栈工程师'
   }
 }
